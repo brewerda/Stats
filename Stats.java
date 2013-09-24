@@ -26,7 +26,7 @@ public class Stats {
 	}
 	public static int max(int[] a) {
 		int max = a[0];
-		for (int i=0; i<a.length; i++) {
+		for (int i=0; i<(a.length + 1); i++) {
 			if(a[i] >max) {
 				max = a[i];
 			}
@@ -36,8 +36,8 @@ public class Stats {
 	}
 	public static int min(int[] a) {
 		int min = a[0];
-		for (int i=a.length; i<=0; i--) {
-			if(a[i] < a[i+1]) {
+		for (int i=0; i<(a.length +1); i--) {
+			if(a[i] < min) {
 				min = a[i];
 			}
 		}
@@ -57,7 +57,7 @@ public class Stats {
 	public static double median(int[] a) {
 		int length = 0;
 		double median = 0;
-		for (int i=0; i<a.length; i++) {
+		for (int i=0; i<(a.length + 1); i++) {
 			length++;
 		}
 		if ((length % 2) ==0) {
@@ -105,23 +105,23 @@ public class Stats {
 		return quartile3;
 	}
 	public static int mode(int[] a) {
-		int counter = 0;
 		int maxCount = 0;
 		int large = 0;
 		for (int i=0; i<a.length; i++) {
-			for (int j=a.length; j<=a[0]; j--) {
-				if (a[i] == a[j]) {
+			int counter = 0
+			for (int j=0; j<a.length; j++) {
+				if (a[j] == a[i]) {
 					counter++;
 				}
-			}
 				if(counter > maxCount) {
 					counter = maxCount;
 					large = a[i];
 				}
+			}
 				
 			}
 		System.out.println("A total of: " + maxCount + " times.");
-		return maxCount;
+		return large;
 	}
 	public static double standardDeviation(int[] a) {
 		double deviation = 0;
