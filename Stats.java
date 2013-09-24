@@ -24,7 +24,7 @@ public class Stats {
 		//
 		//standard deviation
 	}
-	public static double max(int[] a) {
+	public static int max(int[] a) {
 		int max = a[0];
 		for (int i=0; i<a.length; i++) {
 			if(a[i] >max) {
@@ -34,7 +34,7 @@ public class Stats {
 		System.out.println(max);
 		return max;
 	}
-	public static double min(int[] a) {
+	public static int min(int[] a) {
 		int min = a[0];
 		for (int i=a.length; i<=0; i--) {
 			if(a[i] < a[i+1]) {
