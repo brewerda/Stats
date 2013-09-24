@@ -8,7 +8,7 @@ public class Stats {
 		//median(a);
 		//quartile1(a);
 		// quartile3(a);
-		mode(a);
+		//mode(a);
 		//max
 		//
 		//min
@@ -85,7 +85,7 @@ public class Stats {
 		System.out.println(quartile1);
 		return quartile1;
 	}
-	//NOT WORKING YET
+	
 	public static double quartile3(int[] a) {
 		double quartile3 = 0;
 		int length = 0;
@@ -119,11 +119,6 @@ public class Stats {
 				}
 				
 			}
-			
-				
-			
-		
-		
 		System.out.println("A total of: " + maxCount + " times.");
 		return maxCount;
 	}
