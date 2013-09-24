@@ -9,6 +9,7 @@ public class Stats {
 		//quartile1(a);
 		// quartile3(a);
 		//mode(a);
+		//standardDeviation(a);
 		//max
 		//
 		//min
@@ -121,6 +122,33 @@ public class Stats {
 			}
 		System.out.println("A total of: " + maxCount + " times.");
 		return maxCount;
+	}
+	public static double standardDeviation(int[] a) {
+		int sum = 0;
+		int max = 0;
+		int min = a[0];
+		double standardDeviation = 0;
+		
+		for(int i=0;i<a.length;i++) {
+			sum = sum + a[i];
+		}
+		double average = sum / a.length;
+		
+		for(int i=0;i<a.length;i++) {
+			if(a[i] > max) {
+				max = a[i];
+			}
+		}
+		for(int i=0;i<a.length;i++) {
+			if(a[i] < min) {
+				min = a[i];
+			}
+		}
+		for(int i=0;i<a.length;i++) {
+			standardDeviation = standardDeviation + Math.pow(a[i] - average, 2);
+		}
+		System.out.println("The Standard Deviation of Array A is: " + standardDeviation);
+		return standardDeviation;
 	}
 	
 }
