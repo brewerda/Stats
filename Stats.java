@@ -104,7 +104,7 @@ public class Stats {
 		System.out.println(quartile3);
 		return quartile3;
 	}
-	public static double mode(int[] a) {
+	public static int mode(int[] a) {
 		int counter = 0;
 		int maxCount = 0;
 		int large = 0;
