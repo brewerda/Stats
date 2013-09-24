@@ -145,7 +145,7 @@ public class Stats {
 			}
 		}
 		for(int i=0;i<a.length;i++) {
-			standardDeviation = standardDeviation + Math.pow(a[i] - average, 2);
+			standardDeviation = standardDeviation + Math.pow(a[i] - (average -1), 2);
 		}
 		System.out.println("The Standard Deviation of Array A is: " + standardDeviation);
 		return standardDeviation;
